@@ -1,21 +1,21 @@
 fn ownership() {
-    let numbers = vec![1, 2, 3];
+    let numbers = vec![1, 2, 3, 4, 5, 6];
     let slice = &numbers[..]; // creates a slice of all elements in numbers
     println!("slice = {:?}", slice);
 }
 
 fn modifiable() {
-    let mut numbers = vec![1, 2, 3];
+    let mut numbers = vec![1, 2, 3, 4, 5, 6];
     let slice = &mut numbers[..]; // creates a slice of all elements in numbers
     slice[0] = 10;
     // This would fail!
-    //let other_slice = &numbers[..];
+    // let other_slice = &numbers[..];
     println!("slice = {:?}", slice);
 }
 
 fn main() {
     // slices and vectors are similar. But slices are immutable depending on how they are borrowed
-    //ownership();
+    // ownership();
     modifiable();
 }
 
